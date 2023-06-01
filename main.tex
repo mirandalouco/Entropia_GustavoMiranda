@@ -1,0 +1,260 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[brazil]{babel}
+\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools}
+\usepackage{blindtext}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.8,0,0.2}
+\definecolor{backcolour}{rgb}{.95,.95,1}
+\definecolor{backcolour2}{rgb}{255,255,255}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+}
+\lstdefinestyle{mystyle2}{
+    backgroundcolor=\color{backcolour2},   
+    commentstyle=\color{red},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{black},
+    stringstyle=\color{purple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+}
+
+\lstdefinestyle{mystyle3}{
+
+}
+\lstset{style=mystyle,mystyle2, mystyle3}
+\begin{document}
+
+
+\begin{center}
+\textbf{FATEC RUBENS LARA}
+
+\textbf{CURSO DE CIÊNCIA DE DADOS}
+
+\vspace{3cm}
+
+\textbf{ENTROPIA DA INFORMAÇÃO}
+
+\vspace{3cm}
+
+\textbf{GUSTAVO MIRANDA SILVA}
+
+\textbf{GUSTAVO FERREIRA GONÇALVES LIMA}
+
+\vfill
+
+\begin{flushright}
+Santos - São Paulo\\
+11/05/2023
+\end{flushright}
+\end{center}
+
+\begin{figure}{}
+\centering
+\label{}
+\includegraphics[width=14cm,height=2cm]{rodap-4.png}
+\end{figure}
+
+\clearpage
+
+
+Pokémon Fire Red é um jogo eletrônico lançado em 2004 como parte da franquia Pokémon. Ele é uma versão aprimorada do clássico Pokémon Red lançado para o Game Boy original em 1996. Fire Red foi desenvolvido pela Game Freak e publicado pela Nintendo, e é ambientado na região fictícia de Kanto.\\
+
+Na primeira geração que possui um total de 151 Pokémons, que são seres fictícios que habitam o mundo Pokémon com variações em termos de aparência, habilidades e características. \\\\Incluidos no Fire Red existem 15 tipos diferentes de Pokémons, cada tipo possui características únicas e vantagens estratégicas durante as batalhas feitas entre os mesmos, além de batalhas, é possível também a captura dos mesmos.\\\\ Esses tipos são: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost e Dragon. Um destaque é que existem Pokémons que abrangem mais de um tipo como por exemplo o Charizard sendo um tipo Fire e Flying.\\
+
+Neste presente trabalho será cálculado a entropia dos tipos Pokémons, entre os 151, destacando novamente que a quantidade de tipos será maior que a total de Pokemons, a divisão de pokemons com os respectivos tipos se dá por:\\
+
+\begin{align*}
+Normal: 24 \\
+Fire: 14 \\
+Water: 35 \\
+Electric: 9 \\
+Grass: 15 \\
+Ice: 5 \\
+Fighting: 9 \\
+Poison: 36 \\
+Ground: 14 \\
+Flying: 23 \\
+Psychic: 18 \\
+Bug: 14 \\
+Rock: 12 \\
+Ghost: 4 \\
+Dragon: 4 \\
+\\Total: 236     
+\end{align*}
+
+
+\pagebreak
+
+A entropia da informação é um conceito fundamental em teoria da informação e tem aplicações relevantes na ciência de dados. Ela mede a incerteza ou o grau de imprevisibilidade em um conjunto de dados ou em uma distribuição de probabilidade.\\
+
+Na ciência de dados, a entropia da informação é frequentemente utilizada para medir a quantidade de informação contida em uma variável ou para avaliar a importância das variáveis na classificação ou no processo de tomada de decisão.\\
+
+Para realização do cálculo da entropia de dados é utilizado a fórmula abaixo:
+
+\begin{center}
+  $H = -\sum{(p_i \log_2(p_i))}$
+\end{center}
+
+Onde $p_i$ representa a probabilidade de cada tipo de Pokémon e para comparação é cálculada sua máxima de acordo com a segunda fórmula:
+
+\begin{center}
+$H(X) = \log_2(n)$ 
+\end{center}
+
+Onde n é o total dos tipos Pokemons, para realização do cálculo é preciso dos valores da probabilidade de cada classe, ou seja os tipo Pokemons, com isso temos os valores de:
+
+
+\begin{align*}
+\text{Normal:} & \quad \frac{24}{236} \approx 0.1017 \\
+\text{Fire:} & \quad \frac{14}{236} \approx 0.0593 \\
+\text{Water:} & \quad \frac{35}{236} \approx 0.1483 \\
+\text{Electric:} & \quad \frac{9}{236} \approx 0.0381 \\
+\text{Grass:} & \quad \frac{15}{236} \approx 0.0636 \\
+\text{Ice:} & \quad \frac{5}{236} \approx 0.0212 \\
+\text{Fighting:} & \quad \frac{9}{236} \approx 0.0381 \\
+\text{Poison:} & \quad \frac{36}{236} \approx 0.1525 \\
+\text{Ground:} & \quad \frac{14}{236} \approx 0.0593 \\
+\text{Flying:} & \quad \frac{23}{236} \approx 0.0975 \\
+\text{Psychic:} & \quad \frac{18}{236} \approx 0.0763 \\
+\text{Bug:} & \quad \frac{14}{236} \approx 0.0593 \\
+\text{Rock:} & \quad \frac{12}{236} \approx 0.0508 \\
+\text{Ghost:} & \quad \frac{4}{236} \approx 0.0169 \\
+\text{Dragon:} & \quad \frac{4}{236} \approx 0.0169 \\
+\end{align*}
+
+\pagebreak
+
+Em seguida é feito $Log_2$ de cada probabilidade:
+
+\begin{align*}
+\log_{2}(0.1017) \approx -3.1119 \\
+\log_{2}(0.0593) \approx -4.0850 \\
+\log_{2}(0.1483) \approx -2.7590 \\
+\log_{2}(0.0381) \approx -5.2388 \\
+\log_{2}(0.0636) \approx -3.9530 \\
+\log_{2}(0.0212) \approx -5.4437 \\
+\log_{2}(0.0381) \approx -5.2388 \\
+\log_{2}(0.1525) \approx -2.7254 \\
+\log_{2}(0.0593) \approx -4.0850 \\
+\log_{2}(0.0975) \approx -3.2680 \\
+\log_{2}(0.0763) \approx -3.5330 \\
+\log_{2}(0.0593) \approx -4.0850 \\
+\log_{2}(0.0508) \approx -4.3279 \\
+\log_{2}(0.0169) \approx -5.6590 \\
+\log_{2}(0.0169) \approx -5.6590 \\
+\end{align*}
+
+E por fim a realização a fórmula com os valores obtidos é:\\
+
+$H=−(0.1017⋅(−3.3119)+0.0593⋅(−4.0850)+0.1483⋅(−2.7590)+0.0381⋅(−5.2388)+0.0636⋅(−3.9530)+0.0212⋅(−5.4437)+0.0381⋅(−5.2388)+0.1525⋅(−2.7254)+0.0593⋅(−4.0850)+0.0975⋅(−3.2680)+0.0763⋅(−3.5330)+0.0593⋅(−4.0850)+0.0508⋅(−4.3279)+0.0169⋅(−5.6590)+0.0169⋅(−5.6590))$\\\\$H=−(−0.3377+0.2465+0.4105+0.1951+0.2529+0.0910+0.1951+0.4150+0.2414+0.3181+0.2692+0.2465+0.2226+0.0956+0.0956)$\\\\
+$H &\approx 3.6412$\\  
+
+E sua máxima sendo:\\\\ $H(X) = \log_2(15)$\\$H(X) \approx 3.906.$
+
+
+\pagebreak
+
+A aplicação da fórmula para calcular a entropia dos tipos Pokémons, foi realizada no python\\
+
+\begin{lstlisting}[language=python, caption=Código referente ao cálculo da fórmula da entropia]
+import math
+
+# Definição dos tipos pokemons e suas quantidades
+types = {
+    'Normal': 24,
+    'Fire': 14,
+    'Water': 35,
+    'Electric': 9,
+    'Grass': 15,
+    'Ice': 5,
+    'Fighting': 9,
+    'Poison': 36,
+    'Ground': 14,
+    'Flying': 23,
+    'Psychic': 18,
+    'Bug': 14,
+    'Rock': 12,
+    'Ghost': 4,
+    'Dragon': 4
+}
+
+# O total de tipos
+num_types = len(types)
+
+# O total da quantidade de tipos
+total_pokemon = sum(types.values())
+
+# Cálculo da probabilidade de cada tipo
+probabilities = {type_name: count / total_pokemon for type_name, count in types.items()}
+
+# Calculo da entropia
+entropy = -sum(probability * math.log2(probability) for probability in probabilities.values())
+
+#Calculo da entropia máxima
+m_entropy = math.log2(num_types)
+
+# Print das entropias
+print(f"The entropy of Pokémon types is: {entropy:.4f}")
+print(f"The Max Entropy of Pokémon type is: {m_entropy:.4f}")
+\end{lstlisting}
+
+\pagebreak
+\begin{figure}
+Print do console provando os valores:\\\\
+    \centering
+    \includegraphics{print console.png}
+    \caption{Console python}
+    \label{fig:enter-label}
+\end{figure}
+\pagebreak
+\\\\
+\begin{center}
+\textbf{CONCLUSÃO}    
+\end{center}
+
+No contexto dos tipos de Pokémon, se a entropia calculada for menor que a entropia máxima, isso pode indicar que os tipos de Pokémon não estão distribuídos de forma uniforme. Isso significa que alguns tipos de Pokémon podem ser mais comuns ou mais predominantes em comparação com outros tipos. Essa distribuição desigual pode estar relacionada à disponibilidade dos Pokémon em determinadas regiões fictícias de Kanto, à preferência dos jogadores ou a outros fatores.
+\\\\
+Por exemplo, se a entropia calculada for menor que a entropia máxima, isso pode indicar que alguns tipos de Pokémon são mais frequentes do que outros. Isso pode ser resultado de um desequilíbrio nas probabilidades de encontro ou captura de diferentes tipos de Pokémon no jogo.
+\\\\
+No entanto, é importante notar que a interpretação da entropia em relação aos tipos de Pokémon pode variar dependendo da perspectiva e do contexto do jogo. O equilíbrio e a variedade dos tipos de Pokémon podem ser considerados desejáveis em alguns casos, enquanto em outros casos a concentração de certos tipos pode ser estratégica ou desejada pelos jogadores.
+
+
+
+
+
+\end{document}
+
+
